@@ -1,8 +1,12 @@
 # meta version
-class MetaVersion:
+from enum import Enum
+
+
+class MetaVersion(Enum):
     LEGACY1 = "VERSION_LEGACY_1"
     LEGACY2 = "VERSION_LEGACY_2"
     LATEST = "VERSION_LATEST"
+    UNKNOWN = "UNKNOWN"
     # get collection filename
     @staticmethod
     def get_collection_filename(version):
