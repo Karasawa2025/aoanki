@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aoanki"
+version = "0.1.0"
+authors = [
+    { name = "Karasawa2025", email = "" },
+]
+description = "Aoanki (青暗记) is a lightweight and expressive library designed to manage, manipulate, and export Anki decks with clarity and ease. Inspired by the beauty of structured learning and minimalistic tools, Aoanki empowers learners and creators to craft intelligent flashcard workflows."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Karasawa2025/aoanki“
+"Bug Tracker" = "https://github.com/Karasawa2025/aoanki/issues"
