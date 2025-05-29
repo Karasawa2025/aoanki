@@ -1,7 +1,7 @@
 from google.protobuf.json_format import MessageToDict
 
 from aoanki.meta import MetaVersion
-from proto.generated.anki import import_export_pb2
+from proto.anki import import_export_pb2
 
 
 def from_apkg_bytes(apkg_bytes: bytes) -> MetaVersion:
