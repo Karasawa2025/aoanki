@@ -41,6 +41,8 @@ import aoanki
 3. Install development dependencies:
    ```bash
    pip install -e ".[dev]"
+   find anki -name "*.proto" -exec protoc --python_out=. {} \;
+   find . -name "*.py" -exec sed -i '' 's/^import \(.*_pb2\) as/from proto.anki import \1 as/' {} +
    ```
 
 ## License

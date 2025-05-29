@@ -1,6 +1,6 @@
 import pytest
 import os
-from proto.generated.anki import import_export_pb2
+from proto.anki import import_export_pb2
 from google.protobuf.json_format import MessageToDict
 
 current_dir = os.path.dirname(__file__)

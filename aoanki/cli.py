@@ -2,6 +2,9 @@ from pathlib import Path
 import sys
 import datetime
 
+from aoanki.database import legacy1, get_database
+from aoanki.meta.reader import from_apkg_file
+
 # Optional fancy output -------------------------------------------------------
 try:
     from rich.console import Console
@@ -21,10 +24,15 @@ except ImportError:
 
 def open_deck(deck_path: Path):
     """Open an existing Anki deck and return a deck object.
-
     Replace this stub with real logic that loads a deck using the Anki APIs.
     """
     # TODO: Implement real loading logic
+    # Read deck file, parse it, load version
+    meta_version = from_apkg_file(deck_path)
+    print("📦  Deck metadata version:", meta_version)
+    database = get_database(deck_path)
+    cards = database.list_decks()
+    print(f"　📚  Found {len(cards)} decks in {deck_path}")
     return {"path": deck_path, "cards": []}
 
 
